@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reviews Page</title>
+    <style>
+        /* Style for the review containers */
+        .review-container {
+            margin: 20px 0;
+        }
+
+        /* Style for the review text */
+        .review-text {
+            font-size: 16px; /* Adjust the font size as needed */
+            margin-bottom: 10px; /* Add space below each review */
+        }
+
+        /* Style for the reviewer name and date */
+        .reviewer-info {
+            font-size: 14px; /* Adjust the font size as needed */
+            color: #888; /* Adjust the color as needed */
+        }
+    </style>
+</head>
+<body>
+    {% if not reviews or reviews|length == 0 %}
+    <div class="no-reviews-message">
+        <p>Sorry, it seems that there are no reviews available at the moment. The website structure may have changed. Please notify me <a href="mailto:codexistslonglastingnotfog@gmail.com">Here</a>.</p>
+    </div>
+{% else %}
+    {% for review in reviews %}
+        <div class="review-container">
+            <div class="review-text">{{ review }}</div>
+            <hr> <!-- Add a horizontal line between reviews -->
+        </div>
+    {% endfor %}
+{% endif %}
+
+</body>
+</html>

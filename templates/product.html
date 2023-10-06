@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Know your product better</title>
+    <style>
+        /* Style for the header */
+        header {
+            background-color: #000000; /* Header background color */
+            color: white; /* Font color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style for the image containers */
+        .item-container {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            border: 1px solid #ddd; /* Add border */
+            padding: 20px; /* Increased padding */
+            background-color: white; /* Content background color */
+        }
+
+        /* Style for the images */
+        .item-container img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 20px;
+        }
+
+        /* Style for the product name, price, ratings, and text */
+        .item-info {
+            font-size: 16px;
+            color: #000000; /* Font color for content */
+        }
+
+        /* Add spacing between price and ratings */
+        .item-info .price,
+        .item-info .ratings {
+            margin-top: 10px; /* Add spacing */
+        }
+
+        /* Style for the text placeholder */
+        .text-placeholder {
+            color: #999;
+        }
+
+        /* Style for the footer */
+        footer {
+            background-color: #000000; /* Footer background color */
+            color: white; /* Font color for footer text */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style for social media links in the footer */
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Know your product better</h1>
+    </header>
+
+    {% if images|length == 0 %}
+        <div class="apology-message">
+            <p>Sorry, there are no products available at the moment. The website structure may have changed. Please notify me at <a href="mailto:your@email.com">your@email.com</a>.</p>
+        </div>
+    {% else %}
+        {% for i in range(images|length) %}
+            <div class="item-container">
+                <img src="{{ images[i] }}" alt="Image">
+                <div class="item-info">
+                    <div class="product-name">{{ product_name[i] }}</div>
+                    <div class="price text-placeholder">Price: {{ cost[i] }}</div>
+                    <div class="ratings text-placeholder">Ratings: {{ ratings[i] }}</div>
+                    <button class="open-reviews-button" onclick="window.open('/reviews/{{ product_link[i] }}')">Open Reviews</button>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+
+
+
+
+
+    <! footer--------------------!>
+    <footer>
+        <div class="social-links">
+            <a href="https://twitter.com/your_twitter_link" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/your_linkedin_profile" target="_blank">LinkedIn</a>
+            <a href="https://github.com/your_github_profile" target="_blank">GitHub</a>
+            <a href="https://medium.com/@your_medium_profile" target="_blank">Medium</a>
+        </div>
+    </footer>
+</body>
+</html>

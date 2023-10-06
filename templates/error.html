@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error Page</title>
+    <style>
+        /* Style for the header */
+        header {
+            background-color: #000000; /* Header background color */
+            color: white; /* Font color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style for the error message */
+        .error-message {
+            font-size: 16px;
+            color: #FF0000; /* Red color for error message */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style for the footer */
+        footer {
+            background-color: #000000; /* Footer background color */
+            color: white; /* Font color for footer text */
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Error Page</h1>
+    </header>
+
+    <div class="error-message">
+        {{ error_message }}
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://twitter.com/your_twitter_link" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/your_linkedin_profile" target="_blank">LinkedIn</a>
+            <a href="https://github.com/your_github_profile" target="_blank">GitHub</a>
+            <a href="https://medium.com/@your_medium_profile" target="_blank">Medium</a>
+        </div>
+    </footer>
+</body>
+</html>

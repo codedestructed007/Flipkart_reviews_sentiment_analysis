@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Know your product better</title>
+    <style>
+        /* Style for the header */
+        header {
+            background-color: #000000; /* Header background color */
+            color: white; /* Font color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style for the form container */
+        .form-container {
+            margin: 20px;
+            text-align: center;
+        }
+
+        /* Style for the dropdown input */
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        /* Style for the footer */
+        footer {
+            background-color: #000000; /* Footer background color */
+            color: white; /* Font color for footer text */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style for social media links in the footer */
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Know your product better</h1>
+    </header>
+
+    <!-- Form to select phone names -->
+    <div class="form-container">
+        <form action="/product" method="GET">
+    <label for="phone-input">Enter a phone name:</label>
+    <input type="text" id="phone-input" name="phones" placeholder="e.g., iPhone 11 or Samsung Galaxy S21" required>
+    <button type="submit">Search</button>
+</form>
+
+    </div>
+
+    <! footer--------------------!>
+    <footer>
+        <div class="social-links">
+            <a href="https://twitter.com/your_twitter_link" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/your_linkedin_profile" target="_blank">LinkedIn</a>
+            <a href="https://github.com/your_github_profile" target="_blank">GitHub</a>
+            <a href="https://medium.com/@your_medium_profile" target="_blank">Medium</a>
+        </div>
+    </footer>
+</body>
+</html>
